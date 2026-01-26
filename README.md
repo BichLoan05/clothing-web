@@ -1,2 +1,2 @@
-# web-ban-hang
+# web
  HTML, CSS &amp; JavaScript.
