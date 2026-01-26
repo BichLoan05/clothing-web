@@ -1,0 +1,173 @@
+/* --- BANNER (Giữ nguyên) --- */
+.home_header_banner {
+  /* 1. Lớp phủ đen 50%: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+     2. Ảnh nền: url(...) 
+  */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('https://png.pngtree.com/thumb_back/fh260/background/20240105/pngtree-flat-illustration-of-cheese-texture-ideal-for-backgrounds-and-creative-cheese-image_13902845.png');
+  
+  /* Căn chỉnh ảnh */
+  background-size: cover;      /* Phủ kín toàn bộ banner, không méo ảnh */
+  background-position: center; /* Luôn lấy trung tâm bức ảnh */
+  background-repeat: no-repeat;
+
+
+  color: white;
+  padding: 100px 0; /* Tăng chiều cao banner lên chút cho thoáng, đẹp hơn */
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative; /* Đảm bảo an toàn về layout */
+}
+
+.home_header_title { 
+  font-size: 3rem; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
+}
+
+.home_header_subtitle { 
+  font-size: 1.5rem; 
+  color: white;
+  margin-top: 20px;
+}
+
+/* --- GRID LAYOUT --- */
+.home_products_section { width: 80%; margin: 0 auto 50px auto; }
+/* .home_products_grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 30px; 
+} */
+.home_products_grid { 
+  display: grid; 
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 4 SP / 1 hàng */
+  gap: 20px; /* nhỏ lại cho gọn */
+}
+
+/* --- CARD SẢN PHẨM (STYLE TEMPLATE GỐC) --- */
+.product_card_container {
+  background: #fff;
+  border: 1px solid #dee2e6; /* Viền xám nhạt giống Bootstrap */
+  border-radius: 0.375rem; /* Bo góc nhẹ */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Để các card bằng nhau */
+  transition: transform 0.2s;
+}
+
+.product_card_container:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); /* Shadow khi hover */
+}
+
+.product_card_image {
+  width: 100%;
+  height: 150px; /* Chiều cao cố định */
+  object-fit:contain;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  display: block;
+}
+
+.product_card_body {
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 1; /* Đẩy footer xuống đáy */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product_card_name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.product_card_reviews {
+  color: #ffc107;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.product_card_price_row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.product_card_price { font-weight: 400; color: #212529; }
+.product_card_old_price { text-decoration: line-through; color: #6c757d; font-size: 0.9em; }
+
+/* --- FOOTER CHỨA NÚT BẤM --- */
+.product_card_footer {
+  padding: 1.5rem;
+  padding-top: 0;
+  background-color: transparent;
+  border-top: none;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* Khoảng cách giữa 2 nút */
+}
+
+/* Style nút giống btn-outline-dark của Bootstrap */
+.product_btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #212529;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: #212529;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  flex: 1; /* Cho nút chiếm đều không gian */
+  white-space: nowrap;      /* KHÔNG xuống dòng */
+  padding: 0.4rem 0.6rem;   /* gọn hơn chút */
+  font-size: 0.95rem;       
+}
+
+.product_btn:hover {
+  background-color: #212529;
+  color: #fff;
+}
+
+
+/* --- MODAL (Giữ nguyên) --- */
+.modal_overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.product_detail_modal {
+  background: white;
+  width: 800px;
+  max-width: 95%;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  gap: 30px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+.product_detail_img { width: 50%; object-fit: cover; border-radius: 5px; }
+.product_detail_info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.product_detail_price { font-size: 1.5rem; margin: 15px 0; font-weight: bold; }
+.product_detail_desc { margin: 15px 0; color: #555; line-height: 1.5; }
+.modal_close_x { position: absolute; top: 10px; right: 15px; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: #aaa; }
+.modal_close_x:hover { color: #000; }
+.full_width { width: 100%; margin-top: auto; padding: 10px; background: #212529; color: white; border: none; border-radius: 4px; cursor: pointer; }
+.full_width:hover { background: #000; }

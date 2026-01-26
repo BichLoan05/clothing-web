@@ -1,0 +1,166 @@
+.cart_page_container {
+  width: 80%;
+  margin: 30px auto;
+  min-height: 60vh;
+}
+
+.cart_title {
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+  color: #212529;
+}
+
+/* --- TRẠNG THÁI TRỐNG --- */
+.cart_empty_state {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+}
+
+.cart_empty_img {
+  width: 120px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.cart_continue_btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #212529;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* --- DANH SÁCH --- */
+.cart_list {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.cart_item {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  gap: 20px;
+}
+
+.cart_item:last-child {
+  border-bottom: none;
+}
+
+.cart_item_checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.cart_item_image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.cart_item_info {
+  flex-grow: 1;
+}
+
+.cart_item_info h4 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cart_item_price {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.cart_item_size {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* --- ĐIỀU CHỈNH SỐ LƯỢNG --- */
+.cart_quantity_control {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.cart_quantity_control button {
+  background: #f8f9fa;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart_quantity_control button:hover {
+  background: #e2e6ea;
+}
+
+.cart_quantity_control span {
+  width: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* --- NÚT XÓA --- */
+.cart_remove_btn {
+  background: transparent;
+  border: none;
+  color: #adb5bd;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.2s;
+}
+
+.cart_remove_btn:hover {
+  color: #dc3545;
+}
+
+/* --- FOOTER GIỎ HÀNG --- */
+.cart_footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #eee;
+  text-align: right;
+}
+
+.cart_total_preview {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.cart_checkout_button {
+  padding: 12px 30px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cart_checkout_button:hover {
+  background-color: #0b5ed7;
+}

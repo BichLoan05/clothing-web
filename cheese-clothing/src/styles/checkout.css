@@ -1,0 +1,141 @@
+.checkout_page_container {
+  width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.checkout_title {
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.checkout_order_summary {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.checkout_item_row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.checkout_total_row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  font-size: 1.2rem;
+  color: #dc3545;
+}
+
+.checkout_payment_method {
+  margin-bottom: 25px;
+}
+
+.checkout_payment_method label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.checkout_payment_select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.checkout_confirm_button {
+  width: 100%;
+  padding: 12px;
+  background-color: #198754;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.checkout_confirm_button:hover {
+  background-color: #157347;
+}
+
+.checkout_empty {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.checkout_qr_section {
+  margin-top: 15px;
+  text-align: center;
+  border: 1px dashed #007bff;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+}
+
+.checkout_qr_image {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  display: block;
+}
+
+.checkout_bank_note {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ... giữ nguyên code cũ ... */
+
+/* Thêm đoạn này vào cuối file */
+.checkout_section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.checkout_section h3 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.checkout_input_group {
+  margin-bottom: 15px;
+}
+
+.checkout_input_group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.checkout_input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.checkout_input:focus {
+  outline: none;
+  border-color: #0d6efd;
+}

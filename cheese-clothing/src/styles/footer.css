@@ -1,0 +1,68 @@
+.footer_container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #212529;
+  color: #fff;
+  margin-top: auto;
+}
+
+.footer_content {
+  width: 90%;
+  max-width: 1200px; /* Giới hạn chiều rộng để không bị loãng */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* --- GRID CHỨA THÔNG TIN --- */
+.footer_info_grid {
+  display: flex;
+  flex-wrap: wrap; /* Tự động xuống dòng nếu hết chỗ */
+  justify-content: center; /* Căn giữa toàn bộ */
+  gap: 2rem 3rem; /* Khoảng cách: [Hàng] [Cột] */
+  width: 100%;
+}
+
+/* --- STYLE CHUNG CHO CẢ 4 MỤC --- */
+.footer_item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa Icon và Chữ */
+  font-size: 1rem;
+  color: #fff; 
+}
+
+/* Bỏ gạch chân mặc định */
+.footer_link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào Link (FB/Ins) */
+.footer_link:hover {
+  color: #5375ff; 
+}
+
+.footer_link:hover .footer_icon {
+  color: #5375ff; 
+}
+
+.footer_icon {
+  font-size: 1.2rem;
+  color: #adb5bd; 
+  transition: color 0.3s ease;
+}
+
+/* --- COPYRIGHT --- */
+.footer_copyright {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  width: 100%;
+  text-align: center;
+}

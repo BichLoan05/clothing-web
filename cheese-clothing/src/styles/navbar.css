@@ -1,0 +1,189 @@
+/* --- CẤU TRÚC CHUNG --- */
+.navbar_container {
+  background-color: #fff;
+  height: 70px;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.navbar_content {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* --- LOGO --- */
+.navbar_brand {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #212529;
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+/* --- KHỐI ĐIỀU HƯỚNG --- */
+.navbar_left, .navbar_right, .navbar_nav_list {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Khoảng cách đều nhau giữa các mục */
+}
+
+/* --- ITEM MENU CHUNG (Dùng cho cả Admin & User) --- */
+.nav_item_link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #212529;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.nav_item_link:hover, .nav_item_link.active {
+  color: #0d6efd; /* Màu xanh highlight */
+}
+
+/* Icon size helpers */
+.icon_tiny { font-size: 0.8rem; opacity: 0.6; }
+.icon_small { font-size: 1rem; }
+
+/* --- NÚT GIỎ HÀNG (Có viền) --- */
+.nav_cart_btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid #212529;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #212529;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.nav_cart_btn:hover {
+  background-color: #212529;
+  color: #fff;
+}
+
+.nav_cart_btn:hover .cart_badge {
+  background-color: #fff;
+  color: #212529;
+}
+
+.cart_badge {
+  background: #212529;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* --- DROPDOWN DÙNG CHUNG --- */
+.dropdown_wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: 150%; /* Đẩy menu xuống dưới */
+  left: 0;
+  min-width: 180px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  padding: 8px 0;
+  z-index: 1050;
+}
+
+/* Class căn phải cho dropdown User/Admin để không bị tràn màn hình */
+.dropdown_menu_right {
+  left: auto;
+  right: 0;
+}
+
+.dropdown_header {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 600;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 5px;
+}
+
+.dropdown_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 20px;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.dropdown_item:hover {
+  background-color: #f8f9fa;
+  color: #1e2125;
+}
+
+.text_danger { color: #dc3545; }
+.text_danger:hover { background-color: #dc3545; color: white; }
+
+.dropdown_divider {
+  height: 1px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+/* Animation */
+.fade_in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar_logo{
+  width: 60px;
+  height: auto;
+}
+
+.menu_icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
